@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{12E40DA3-3D75-476C-856F-F9894D337F97}</ProjectGuid>
+    <RootNamespace>OpenGlGame01</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>.\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glfw3dll.lib;glew32.lib;glew32s.lib;SOIL.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>.\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glfw3dll.lib;glew32.lib;glew32s.lib;SOIL.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AirBlock.cpp" />
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="DirtBlock.cpp" />
+    <ClCompile Include="Enemy5.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Enemy1.cpp" />
+    <ClCompile Include="Enemy2.cpp" />
+    <ClCompile Include="Enemy3.cpp" />
+    <ClCompile Include="Enemy4.cpp" />
+    <ClCompile Include="Enemy6.cpp" />
+    <ClCompile Include="Enemy7.cpp" />
+    <ClCompile Include="Enemy8.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GFX.cpp" />
+    <ClCompile Include="GrassBlock.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mouse.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="StoneBlock.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Textures.cpp" />
+    <ClCompile Include="Tower.cpp" />
+    <ClCompile Include="Tower1.cpp" />
+    <ClCompile Include="Tower2.cpp" />
+    <ClCompile Include="Tower3.cpp" />
+    <ClCompile Include="Tower4.cpp" />
+    <ClCompile Include="Waves.cpp" />
+    <ClCompile Include="World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AirBlock.h" />
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="Cost.h" />
+    <ClInclude Include="Damage.h" />
+    <ClInclude Include="dirent.h" />
+    <ClInclude Include="DirtBlock.h" />
+    <ClInclude Include="Enemy5.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Enemy1.h" />
+    <ClInclude Include="Enemy2.h" />
+    <ClInclude Include="Enemy3.h" />
+    <ClInclude Include="Enemy4.h" />
+    <ClInclude Include="Enemy6.h" />
+    <ClInclude Include="Enemy7.h" />
+    <ClInclude Include="Enemy8.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GFX.h" />
+    <ClInclude Include="GrassBlock.h" />
+    <ClInclude Include="KillPoints.h" />
+    <ClInclude Include="Radius.h" />
+    <ClInclude Include="Health.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="Mouse.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="StoneBlock.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Textures.h" />
+    <ClInclude Include="Tower.h" />
+    <ClInclude Include="Tower1.h" />
+    <ClInclude Include="Tower2.h" />
+    <ClInclude Include="Tower3.h" />
+    <ClInclude Include="Tower4.h" />
+    <ClInclude Include="Waves.h" />
+    <ClInclude Include="World.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
